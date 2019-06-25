@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     
-    working_directory: ~/circleci-lowest-common-ancestor
+    working_directory: ~/Prueba-Backend-Masivian
 
     docker:
       - image: circleci/openjdk:8-jdk-browsers
@@ -12,14 +12,14 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: circleci-lowest-common-ancestor-{{ checksum "pom.xml" }}
+          key: Prueba-Backend-Masivian-{{ checksum "pom.xml" }}
       
       - run: mvn dependency:go-offline
       
       - save_cache:
           paths:
             - ~/.m2
-          key: circleci-lowest-common-ancestor-{{ checksum "pom.xml" }}
+          key: cPrueba-Backend-Masivian-{{ checksum "pom.xml" }}
       
       - run: mvn package
         # run tests!
