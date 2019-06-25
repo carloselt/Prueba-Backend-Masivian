@@ -3,6 +3,7 @@ package com.masivian.lca;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 /**
  * The Class LowestCommonAncestorApplication.
  *
