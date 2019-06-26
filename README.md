@@ -23,6 +23,8 @@ Las herramientas utilizadas para el desarrollo de la prueba son:
 
 Clonamos el siguiente [repositorio](https://github.com/carloselt/Prueba-Backend-Masivian) en una carpeta y al finalizar debemos tener los siguientes archivos:
 
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%201.JPG?raw=true)
+
 Una vez tengamos estos archivos y estando en la carpeta, mediante el uso de la terminal vamos a ejecutar el siguiente comando para ejecutar la solución: 
 `java -jar target/lowest-common-ancestor-0.0.1-SNAPSHOT.jar`
 
