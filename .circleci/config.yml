@@ -21,7 +21,7 @@ jobs:
             - ~/.m2
           key: Prueba-Backend-Masivian-{{ checksum "pom.xml" }}
       
-      - run: mvn package
+      - run: mvn install
         # run tests!
       - run: mvn test
       
