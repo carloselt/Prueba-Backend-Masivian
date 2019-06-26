@@ -123,6 +123,6 @@ Posterior a esto vamos a presionar click derecho sobre el proyecto > Run As > Sp
 
 Se hace uso de la herramienta de Integración continua [CircleCI](https://circleci.com/) la cual se encarga de verificar que el proyecto se construye correctamente, que los test se están ejecutando bien y cada que vez que hay un cambio en el repositorio la herramienta hace un build para ver que no se haya afectado la aplicación. Cuando esto pasa se notifica vía correo el error.
 
-
+https://circleci.com/gh/carloselt/Prueba-Backend-Masivian
 
 
