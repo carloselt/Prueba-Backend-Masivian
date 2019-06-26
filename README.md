@@ -35,13 +35,13 @@ Las líneas subrayadas indican que la aplicación se está ejecutando y podemos 
 Utilizando un cliente REST como Postman hacemos la petición para la creación de un árbol binario. Para el modelado del árbol se utiliza en formato JSON y se modela de manera recursiva, cada nodo del árbol tiene un valor y dos nodos hijos (derecho e izquierdo) y así sucesivamente. 
 
 El formato JSON para la creación es el siguiente:
-
-  5
+```javascript
+  2
  / \
 7   15
    /
   8
-  
+```  
 ```javascript
 {
    "value": 2,
@@ -61,6 +61,46 @@ El formato JSON para la creación es el siguiente:
   }
 }
 ```
+Ejecutamos un método **POST** http://localhost:8080/binaryTree/createBinaryTree para la creación del recurso árbol binario agregando en el body el JSON que representa al árbol y si es correcto el API debe responder un status 200 OK con el árbol creado:
 
+La terminal va *logeando* las interacciones con la aplicación:
 
+## Obtener el ancestro común más cercado - LCA 
+
+Para probar el Lowest Common Ancestor ejecutamos el método **GET** http://localhost:8080/binaryTree/lowestCommonAncestor?nodeTwo=4&nodeOne=22 
+
+En el body de la petición agregamos el árbol que queramos y como query params los nodos uno y dos:
+```  
+```javascript
+{
+  "value": 20,
+  "left": {
+    "value": 8,
+    "left": {
+      "value": 4,
+      "left": null,
+      "right": null
+    },
+    "right": {
+        "value": 12,
+        "left": {
+          "value": 10,
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "value": 14,
+          "left": null,
+          "right": null
+        }
+      }
+  },
+  "right": {
+    "value": 22,
+    "left": null,
+    "right": null
+  }
+}
+```
+Al ejecutarlo la aplicación nos devuelve el ancestro común más cercado LCA del arbol y el estatus 200 OK
 
