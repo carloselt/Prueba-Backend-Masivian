@@ -29,6 +29,7 @@ Una vez tengamos estos archivos y estando en la carpeta, mediante el uso de la t
 `java -jar target/lowest-common-ancestor-0.0.1-SNAPSHOT.jar`
 
 Al ejecutarlo nos debe aparecer en la consola la siguiente información la cual indica que un servidor tomcat se desplegó en el puerto 8080:
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%202.JPG?raw=true)
 
 Las líneas subrayadas indican que la aplicación se está ejecutando y podemos hacer uso del API Rest.
 
@@ -66,7 +67,12 @@ El formato JSON para la creación es el siguiente:
 ```
 Ejecutamos un método **POST** http://localhost:8080/binaryTree/createBinaryTree para la creación del recurso árbol binario agregando en el body el JSON que representa al árbol y si es correcto el API debe responder un status 200 OK con el árbol creado:
 
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%203.JPG?raw=true)
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%204.JPG?raw=true)
+
 La terminal va *logeando* las interacciones con la aplicación:
+
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%205.JPG?raw=true)
 
 ## Obtener el ancestro común más cercado - LCA 
 
@@ -105,21 +111,31 @@ En el body de la petición agregamos el árbol que queramos y como query params 
   }
 }
 ```
-Al ejecutarlo la aplicación nos devuelve el ancestro común más cercado LCA del arbol y el estatus 200 OK
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%206.JPG?raw=true)
+
+Al ejecutarlo la aplicación nos devuelve el ancestro común más cercado LCA del arbol, en este caso **20** y el estatus 200 OK
+
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%207.JPG?raw=true)
 
 La terminal va mostrando las peticiones hechas en la aplicación:
 
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%208.JPG?raw=true)
 
 La aplicación valida errores cuando ingresamos un árbol incorrecto o nos faltan los datos mostrando el error como respuesta:
 
-
-
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%209.JPG?raw=true)
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%2010.JPG?raw=true)
 
 ## Ejecutar la solución por el IDE STS
 Una vez tengamos instalado STS y definidas las variable de entorno JAVA_HOME ingresamos en las siguientes opciones file > import > Existing Maven Projects y seleccionamos la carpeta descargada.
 Una vez tengamos esta estructura y el proyecto esté listo presionamos click derecho sobre el proyecto > Run As > Maven Install y lo ejecutamos. Cuando finalice y en la terminal se muestre **BUILD SUCCESS** lo cual indica que el proyecto se configuro y se construyó correctamente ejecutado un test unitario: 
 
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%2011.JPG?raw=true)
+
+
 Posterior a esto vamos a presionar click derecho sobre el proyecto > Run As > Spring Boot App y se ejecuta la aplicación mostrando en la terminal la siguiente información: 
+
+![alt text](https://github.com/carloselt/Prueba-Backend-Masivian/blob/master/images/imagen%2012.JPG?raw=true)
 
 [![CI](https://circleci.com/gh/carloselt/Prueba-Backend-Masivian.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/carloselt/Prueba-Backend-Masivian)
 
