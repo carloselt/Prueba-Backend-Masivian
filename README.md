@@ -35,6 +35,7 @@ Las líneas subrayadas indican que la aplicación se está ejecutando y podemos 
 Utilizando un cliente REST como Postman hacemos la petición para la creación de un árbol binario. Para el modelado del árbol se utiliza en formato JSON y se modela de manera recursiva, cada nodo del árbol tiene un valor y dos nodos hijos (derecho e izquierdo) y así sucesivamente. 
 
 El formato JSON para la creación es el siguiente:
+
 ```javascript
   2
  / \
@@ -69,8 +70,8 @@ La terminal va *logeando* las interacciones con la aplicación:
 
 Para probar el Lowest Common Ancestor ejecutamos el método **GET** http://localhost:8080/binaryTree/lowestCommonAncestor?nodeTwo=4&nodeOne=22 
 
-En el body de la petición agregamos el árbol que queramos y como query params los nodos uno y dos:
-```  
+En el body de la petición agregamos el árbol que queramos y como query params y los nodos uno y dos:
+
 ```javascript
 {
   "value": 20,
@@ -103,4 +104,25 @@ En el body de la petición agregamos el árbol que queramos y como query params 
 }
 ```
 Al ejecutarlo la aplicación nos devuelve el ancestro común más cercado LCA del arbol y el estatus 200 OK
+
+La terminal va mostrando las peticiones hechas en la aplicación:
+
+
+La aplicación valida errores cuando ingresamos un árbol incorrecto o nos faltan los datos mostrando el error como respuesta:
+
+
+
+
+## Ejecutar la solución por el IDE STS
+Una vez tengamos instalado STS y definidas las variable de entorno JAVA_HOME ingresamos en las siguientes opciones file > import > Existing Maven Projects y seleccionamos la carpeta descargada.
+Una vez tengamos esta estructura y el proyecto esté listo presionamos click derecho sobre el proyecto > Run As > Maven Install y lo ejecutamos. Cuando finalice y en la terminal se muestre **BUILD SUCCESS** lo cual indica que el proyecto se configuro y se construyó correctamente ejecutado un test unitario: 
+
+Posterior a esto vamos a presionar click derecho sobre el proyecto > Run As > Spring Boot App y se ejecuta la aplicación mostrando en la terminal la siguiente información: 
+
+[![CI](https://circleci.com/gh/carloselt/Prueba-Backend-Masivian.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/carloselt/Prueba-Backend-Masivian)
+
+Se hace uso de la herramienta de Integración continua [CircleCI](https://circleci.com/) la cual se encarga de verificar que el proyecto se construye correctamente, que los test se están ejecutando bien y cada que vez que hay un cambio en el repositorio la herramienta hace un build para ver que no se haya afectado la aplicación. Cuando esto pasa se notifica vía correo el error.
+
+
+
 
